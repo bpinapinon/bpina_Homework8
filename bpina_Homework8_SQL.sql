@@ -224,7 +224,7 @@ SELECT f.title  AS FilmTitle
     OR f.title LIKE 'Q%')
    AND f.language_id IN (SELECT l.language_id
                            FROM sakila.language AS l
-						  WHERE l.name = 'English');
+			  WHERE l.name = 'English');
    
 /******************************************************************************************
 7b. Use subqueries to display all actors who appear in the film Alone Trip.
@@ -235,7 +235,7 @@ SELECT CONCAT(a.first_name, ' ', a.last_name) AS AloneTrip_ActorName
                         FROM sakila.film_actor AS fa
                        WHERE fa.film_id IN (SELECT f.film_id
                                               FROM sakila.film AS f
-					                         WHERE f.title = 'Alone Trip'));
+					     WHERE f.title = 'Alone Trip'));
 
 /******************************************************************************************
 7c. You want to run an email marketing campaign in Canada, 
